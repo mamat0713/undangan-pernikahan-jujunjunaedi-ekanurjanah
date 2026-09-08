@@ -1,0 +1,1196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background: #fff8f8;
+
+    color: #4a3b3d;
+
+    overflow-x: hidden;
+
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+
+    font-family: "Cormorant Garamond", serif;
+
+}
+
+
+.container {
+
+    width: min(100% - 40px, 1000px);
+
+    margin: auto;
+
+}
+
+
+/* =====================================================
+   COVER
+===================================================== */
+
+#cover {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+    color: white;
+
+}
+
+
+.cover-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("asset/bungacover.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    animation: coverZoom 15s ease-in-out infinite alternate;
+
+}
+
+
+.cover-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+     background-color: rgba(56, 43, 2, 0.15);
+
+}
+
+
+.cover-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+}
+
+
+.cover-small {
+
+    letter-spacing: 6px;
+
+    font-size: 12px;
+
+}
+
+
+.cover h1 {
+
+    font-size: clamp(60px, 10vw, 110px);
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    margin: 25px 0;
+
+}
+
+
+.cover h1 span {
+
+    font-style: italic;
+
+}
+
+
+.cover-date {
+
+    letter-spacing: 5px;
+
+}
+
+
+.guest-box {
+
+    margin-top: 40px;
+
+}
+
+
+.guest-box p {
+
+    font-size: 13px;
+
+}
+
+
+.guest-box h3 {
+
+    font-size: 28px;
+
+    margin: 5px 0;
+
+}
+
+
+.guest-box small {
+
+    font-size: 10px;
+
+    opacity: .8;
+
+}
+
+
+#openInvitation {
+
+    margin-top: 30px;
+
+    padding: 14px 28px;
+
+    border: 1px solid white;
+
+    background: rgba(255,255,255,.12);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    backdrop-filter: blur(5px);
+
+    transition: .3s;
+
+}
+
+
+#openInvitation:hover {
+
+    background: rgb(247, 205, 99);
+
+    color: #451206;
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+#mainContent {
+
+    display: none;
+
+}
+
+
+body.opened #cover {
+
+    animation: coverOut 1s forwards;
+
+}
+
+
+body.opened #mainContent {
+
+    display: block;
+
+    animation: pageIn 1s ease;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white; 
+
+    background:
+        linear-gradient(
+            rgba(60,30,40,.4),
+            rgba(60,30,40,.55)
+        ),
+        url("asset/wedding\ background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(60px, 10vw, 110px);
+
+    font-weight: 500;
+
+}
+
+
+.hero h1 span {
+
+    font-style: italic;
+
+}
+
+
+.hero p {
+
+    letter-spacing: 4px;
+
+}
+
+
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+section:not(.hero) {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+}
+
+
+.section-label {
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+
+}
+
+
+section h2 {
+
+    font-size: 55px;
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =====================================================
+   OPENING
+===================================================== */
+
+.opening {
+
+  background: rgb(255, 255, 255);
+  /* bg assalamualaikum */
+  /* background-image: url(asset/bannercover.jpg);  */
+
+}
+
+
+.opening p:last-child {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 2;
+
+}
+
+
+.arabic {
+
+    font-size: 25px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =====================================================
+   COUPLE
+===================================================== */
+
+.couple {
+
+    background: #f9eded;
+
+}
+
+
+.couple-wrapper {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 60px;
+
+}
+
+
+.person {
+
+    max-width: 300px;
+
+}
+
+
+.person img {
+
+    width: 230px;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 50% 50% 10px 10px;
+
+}
+
+
+.person h3 {
+
+    font-size: 34px;
+
+    margin: 20px 0 5px;
+
+}
+
+
+.person p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.ampersand {
+
+    font-family: "Cormorant Garamond";
+
+    font-size: 70px;
+
+}
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.countdown {
+
+    background: #fff;
+
+}
+
+
+.countdown-wrapper {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+    cursor: pointer;
+
+}
+
+
+.count-item {
+
+    width: 100px;
+
+    padding: 20px 10px;
+
+    background: #f9eded;
+
+}
+
+
+.count-item strong {
+
+    display: block;
+
+    font-family: "Cormorant Garamond";
+
+    font-size: 40px;
+
+}
+
+
+.count-item span {
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =====================================================
+   STORY
+===================================================== */
+
+.story {
+
+    /* background: #f9eded; */
+    background-image: url("asset/wedding\ background.jpg");
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white; 
+
+    background:
+        linear-gradient(
+            rgba(60,30,40,.4),
+            rgba(60,30,40,.55)
+        ),
+        url("asset/wedding\ background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.story-item {
+
+    max-width: 600px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 5px;
+
+}
+
+
+.story-item span {
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.story-item h3 {
+
+    font-size: 30px;
+
+    margin: 10px 0;
+
+}
+
+
+.story-item p {
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   EVENT
+===================================================== */
+
+.event {
+
+    background: white;
+
+}
+
+
+.event-wrapper {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+}
+
+
+.event-card {
+
+    width: 320px;
+
+    padding: 40px 25px;
+
+    background: #f9eded;
+
+}
+
+
+.event-card i {
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.event-card h3 {
+
+    font-size: 32px;
+
+}
+
+
+.event-card h4 {
+
+    font-size: 20px;
+
+    margin: 8px 0;
+
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.location {
+
+    background: #f9eded;
+
+}
+
+
+.location-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.button {
+
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    margin-top: 25px;
+
+    background: #6d4d53;
+
+    color: white;
+
+    border: none;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+.button:hover {
+
+    background: #451206;
+    transition: transform 0.2s ease-in-out; 
+    transform: scale(0.9); 
+
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery {
+
+    background: white;
+
+}
+
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+
+.gallery-grid img {
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+}
+
+
+/* =====================================================
+   RSVP
+===================================================== */
+
+.rsvp {
+
+    background: #f9eded;
+
+}
+
+
+form {
+
+    max-width: 500px;
+
+    margin: auto;
+
+}
+
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #ddd;
+
+    background: white;
+
+    font-family: inherit;
+
+}
+
+
+textarea {
+
+    min-height: 120px;
+
+    resize: vertical;
+
+}
+
+
+/* =====================================================
+   WISH
+===================================================== */
+
+.wishes {
+
+    background: white;
+
+}
+
+
+.wish {
+
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    padding: 20px;
+
+    text-align: left;
+
+    background: #f9eded;
+
+}
+
+
+.wish p {
+
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   GIFT
+===================================================== */
+
+.gift {
+
+    background: #f9eded;
+
+}
+
+
+/* =====================================================
+   GIFT (AMPLOP DIGITAL DANA)
+===================================================== */
+.bank-card {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,.05);
+    text-align: center;
+    filter: drop-shadow(0 8px 6px rgba(0, 0, 0, 0.322));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo DANA transparan di latar belakang (tidak terlalu terang/putih) */
+.bank-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("asset/danalogo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    filter: grayscale(20%) brightness(110%);
+    z-index: 1;
+}
+
+/* Memastikan teks berada di atas background logo dan posisinya center */
+.bank-card h3,
+.bank-card strong,
+.bank-card p,
+.bank-card button {
+    position: relative;
+    z-index: 2;
+}
+
+.bank-card strong {
+    display: block;
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.copy-button {
+    padding: 10px 20px;
+    border: 1px solid #6d4d53;
+    background: transparent;
+    color: #6d4d53;
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    background: #6d4d53;
+    color: white;
+}
+
+
+.bank-card strong {
+
+    display: block;
+
+    font-size: 25px;
+
+    margin: 15px 0;
+
+}
+
+
+.copy-button {
+
+    padding: 10px 20px;
+
+    border: 1px solid #6d4d53;
+
+    background: transparent;
+
+    color: #6d4d53;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 70px 20px 100px;
+
+    text-align: center;
+
+    background: #4c363b;
+
+    color: white;
+
+}
+
+
+footer h2 {
+
+    font-size: 45px;
+
+}
+
+
+.copyright {
+
+    margin-top: 30px;
+
+    font-size: 10px;
+
+    opacity: .5;
+
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+.music-button {
+
+    position: fixed;
+
+    z-index: 100;
+
+    right: 20px;
+
+    top: 20px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #6d4d53;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   BOTTOM NAV
+===================================================== */
+
+.bottom-nav {
+
+    position: fixed;
+
+    z-index: 90;
+
+    left: 50%;
+
+    bottom: 15px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 5px;
+
+    padding: 8px;
+
+    background: rgba(255,255,255,.92);
+
+    border-radius: 50px;
+
+    box-shadow: 0 5px 30px rgba(0,0,0,.15);
+
+}
+
+
+.bottom-nav a {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    min-width: 60px;
+
+    padding: 5px;
+
+    color: #6d4d53;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+}
+
+
+.bottom-nav i {
+
+    font-size: 15px;
+
+    margin-bottom: 3px;
+
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes coverZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+
+}
+
+
+@keyframes coverOut {
+
+    to {
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: scale(1.05);
+
+    }
+
+}
+
+
+@keyframes pageIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+
+    section:not(.hero) {
+
+        padding: 80px 20px;
+
+    }
+
+
+    section h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    .cover h1 {
+
+        font-size: 65px;
+
+    }
+
+
+    .couple-wrapper {
+
+        flex-direction: column;
+
+        gap: 25px;
+
+    }
+
+
+    .ampersand {
+
+        font-size: 45px;
+
+    }
+
+
+    .event-wrapper {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .event-card {
+
+        width: 100%;
+
+        max-width: 350px;
+
+    }
+
+
+    .countdown-wrapper {
+
+        gap: 5px;
+
+    }
+
+
+    .count-item {
+
+        width: 75px;
+
+        padding: 15px 5px;
+
+    }
+
+
+    .count-item strong {
+
+        font-size: 30px;
+
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .gallery-grid img {
+
+        height: 180px;
+
+    }
+
+
+    .bottom-nav a {
+
+        min-width: 55px;
+
+    }
+
+}
+
+/* button */
+/* =====================================================
+   ACTIVE STATE UNTUK BOTTOM NAV
+===================================================== */
+.bottom-nav a.active {
+    color: #b8860b; /* Warna penanda aktif (bisa disesuaikan) */
+    font-weight: 600;
+}
+
+.bottom-nav a.active i {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
