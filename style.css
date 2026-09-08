@@ -70,7 +70,7 @@ h4 {
     inset: 0;
 
     background-image:
-        url("asset/bungacover.jpg");
+        url("../asset/bungacover.jpg");
 
     background-size: cover;
 
@@ -265,7 +265,7 @@ body.opened #mainContent {
             rgba(60,30,40,.4),
             rgba(60,30,40,.55)
         ),
-        url("asset/wedding\ background.jpg");
+        url("../asset/wedding\ background.jpg");
 
     background-size: cover;
 
@@ -342,7 +342,7 @@ section h2 {
 
   background: rgb(255, 255, 255);
   /* bg assalamualaikum */
-  /* background-image: url(asset/bannercover.jpg);  */
+  /* background-image: url(../asset/bannercover.jpg);  */
 
 }
 
@@ -499,7 +499,7 @@ section h2 {
 .story {
 
     /* background: #f9eded; */
-    background-image: url("asset/wedding\ background.jpg");
+    background-image: url("../asset/wedding\ background.jpg");
     min-height: 100vh;
 
     display: flex;
@@ -517,7 +517,7 @@ section h2 {
             rgba(60,30,40,.4),
             rgba(60,30,40,.55)
         ),
-        url("asset/wedding\ background.jpg");
+        url("../asset/wedding\ background.jpg");
 
     background-size: cover;
 
@@ -834,7 +834,7 @@ textarea {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("asset/danalogo.png");
+    background-image: url("../asset/danalogo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
